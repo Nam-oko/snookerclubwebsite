@@ -1,0 +1,111 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+class SnookerTable {
+    private int tableNumber;
+    private boolean isAvailable;
+
+    public SnookerTable(int tableNumber) {
+        this.tableNumber = tableNumber;
+        this.isAvailable = true;
+    }
+
+    public int getTableNumber() {
+        return tableNumber;
+    }
+
+    public boolean isAvailable() {
+        return isAvailable;
+    }
+
+    public void setAvailable(boolean available) {
+        isAvailable = available;
+    }
+}
+
+class SnookerClub {
+    private String clubName;
+    private List<SnookerTable> tables;
+    private Map<String, Integer> members;
+
+    public SnookerClub(String clubName) {
+        this.clubName = clubName;
+        this.tables = new ArrayList<>();
+        this.members = new HashMap<>();
+    }
+
+    public void addTable(int tableNumber) {
+        SnookerTable table = new SnookerTable(tableNumber);
+        tables.add(table);
+    }
+
+    public void removeTable(int tableNumber) {
+        tables.removeIf(table -> table.getTableNumber() == tableNumber);
+    }
+
+    public void registerMember(String memberId, String memberName) {
+        members.put(memberId, memberName);
+    }
+
+    public void removeMember(String memberId) {
+        members.remove(memberId);
+    }
+
+    public void bookTable(String memberId, int tableNumber) {
+        SnookerTable table = getTable(tableNumber);
+        if (table != null && table.isAvailable()) {
+            table.setAvailable(false);
+            System.out.println("Table " + tableNumber + " has been booked by member " + members.get(memberId));
+        } else {
+            System.out.println("Table " + tableNumber + " is not available.");
+        }
+    }
+
+    public void releaseTable(int tableNumber) {
+        SnookerTable table = getTable(tableNumber);
+        if (table != null && !table.isAvailable()) {
+            table.setAvailable(true);
+            System.out.println("Table " + tableNumber + " has been released.");
+        } else {
+            System.out.println("Table " + tableNumber + " is already available.");
+        }
+    }
+
+    private SnookerTable getTable(int tableNumber) {
+        for (SnookerTable table : tables) {
+            if (table.getTableNumber() == tableNumber) {
+                return table;
+            }
+        }
+        return null;
+    }
+}
+
+public class SnookerClubApp {
+    public static void main(String[] args) {
+        SnookerClub club = new SnookerClub("My Snooker Club");
+
+        // Add tables to the club
+        club.addTable(1);
+        club.addTable(2);
+        club.addTable(3);
+
+        // Register members
+        club.registerMember("001", "John");
+        club.registerMember("002", "Alice");
+
+        // Book a table
+        club.bookTable("001", 2);
+
+        // Release the table
+        club.releaseTable(2);
+
+        // Remove a table from the club
+        club.removeTable(1);
+
+        // Remove a member
+        club.removeMember("002");
+    }
+}
