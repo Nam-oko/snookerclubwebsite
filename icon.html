@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Snooker Reservation and Booking</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    
+    h1 {
+      color: #333;
+    }
+    
+    .booking-form {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    
+    .booking-form label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    
+    .booking-form input[type="text"],
+    .booking-form input[type="email"],
+    .booking-form input[type="date"],
+    .booking-form select {
+      width: 100%;
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    
+    .booking-form button {
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    .billing-address {
+      margin-top: 20px;
+      border-top: 1px solid #ccc;
+      padding-top: 20px;
+    }
+    
+    .billing-address label {
+      display: block;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Snooker Reservation and Booking</h1>
+  
+  <div class="booking-form">
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="name" placeholder="Enter your full name">
+    
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email address">
+    
+    <label for="date">Date:</label>
+    <input type="date" id="date" name="date">
+    
+    <label for="time">Time Slot:</label>
+    <select id="time" name="time">
+      <option value="morning">Morning (9:00 AM - 12:00 PM)</option>
+      <option value="afternoon">Afternoon (12:00 PM - 3:00 PM)</option>
+      <option value="evening">Evening (3:00 PM - 6:00 PM)</option>
+    </select>
+    
+    <button type="submit">Book Now</button>
+    
+    <div class="billing-address">
+      <h3>Billing Address</h3>
+      <label for="address">Address:</label>
+      <input type="text" id="address" name="address" placeholder="Enter your billing address">
+      
+      <label for="city">City:</label>
+      <input type="text" id="city" name="city" placeholder="Enter your city">
+      
+      <label for="postal-code">Postal Code:</label>
+      <input type="text" id="postal-code" name="postal-code" placeholder="Enter your postal code">
+      
+      <h3>Payment Method</h3>
+      <label for="card-number">Card Number:</label>
+      <input type="text" id="card-number" name="card-number" placeholder="Enter your card number">
+      
+      <label for="expiry-date">Expiry Date:</label>
+      <input type="text" id="expiry-date" name="expiry-date" placeholder="Enter expiry date">
+      
+      <label

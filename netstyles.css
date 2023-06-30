@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wgt@400;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    width: 92%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://us.123rf.com/450wm/krikava/krikava1702/krikava170200021/71095293-focus-on-white-billiard-ball.jpg?ver=6');
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.container{
+    width: 600px;
+    height: 500px;
+    
+    background: transparent;
+  
+    
+   
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    justify-content: center;
+}
+.container h2{
+    text-align: center;
+    background-color: rgb(226, 229, 232);
+    color:#0fcf1c ;
+}
+.inputbox{
+    margin-bottom: 8px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width:100% ;
+    margin-right: 12px;
+    position: relative;
+    padding: 14px 10px 14px 50px;
+    background-color: #fcfcfc;
+    border: 1px solid #0003;
+    outline: none;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    border-radius: 5px;
+    color: #333;
+}
+.inputbox h2{
+    color: #000;
+    background-color: #fff;
+}
+    .flex{
+        margin-bottom: 8px;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        width:100% ;
+        margin-right: 12px;
+        position: relative;
+        padding: 14px 10px 14px 50px;
+        background-color:#fff;
+        border: 1px solid #0003;
+        outline: none;
+        letter-spacing: 1px;
+        transition: 0.3s;
+        border-radius: 5px;
+        color: #333;
+
+    }
+    .icons{
+        width: 10px;
+        align-items: center;
+    }
+.submit-btn{
+    font-size: 1rem;
+    margin-top: 1.8rem;
+    padding: 10px 0;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    width: 50%;
+    color: #fff; 
+    cursor: pointer;
+    background: rgb(207, 23, 20);
+}
+submit-btn:hover{
+    background-color: rgb(211, 138, 138);
+    color: #fcfcfc;
+}
+label{
+    width: 200px;
+    display: inline-block;
+    margin: 0.2cm;
+    font-size: 16px;
+    font-weight: bold;
+}

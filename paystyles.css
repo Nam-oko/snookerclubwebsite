@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wgt@400;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    background-image:url("https://i.pinimg.com/originals/d4/17/25/d41725e18e7cde5b8890759c1daa691f.jpg");
+background-repeat: no-repeat;
+display: flex;
+align-items: center;
+justify-content: center;
+min-height: 100vh;
+background-size: cover;
+background-position: center;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    background:linear-gradient(45deg,#119b4a,white,#0eb41e)    #99eabb ;
+    width: 500px;
+    padding: 25px;
+    margin: 25px auto 0;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0,0.5);
+border-radius: 10px;
+}
+.container h3{
+    background-color: #61dae8;
+    color: rgb(7, 8, 8);
+    font-size: 24px;
+    padding: 10px;
+    margin-bottom: 8px;
+    text-align: center;
+    border: 1px dashed #a6dadc;
+}
+.container h1{
+    padding-bottom: 5px;
+    color: #070707;
+}
+label{
+    width: 200px;
+    display: inline-block;
+    margin: 0.2cm;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.inputbox{
+    margin-bottom: 8px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width:100% ;
+    margin-right: 12px;
+    position: relative;
+    padding: 14px 10px 14px 50px;
+
+    outline: none;
+    letter-spacing: 1px;
+    transition: 0.3s;
+  
+    color: #333;
+}
+
+.flex{
+    margin-bottom: 8px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin-right: 12px;
+    position: relative;
+    padding: 14px 10px 14px 50px;
+    width: 100%;
+    
+
+    outline: none;
+    letter-spacing: 1px;
+    transition: 0.3s;
+   
+    color: #333;
+}
+
+.payment-option{
+    margin-bottom: 8px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin-right: 12px;
+    position: relative;
+    padding: 14px 10px 14px 50px;
+    width: 100%;
+background-color: #fff;
+    border: 1px solid #0003;
+    outline: none;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    border-radius: 20px;
+    color: #333;
+}
+.radio{
+    display: none;
+}
+.radio:checked{
+    background-color: #21cdd3;
+    color: #fff;
+    transition: 0.5s;
+}
+
+button{
+    font-size: 1rem;
+    margin-top: 1.8rem;
+    padding: 10px 0;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    width: 50%;
+    color: #fff; 
+    cursor: pointer;
+    background: rgb(99, 188, 223);
+}
+button:hover{
+    background-color: #15078a;
+    color: #fff;
+
+}
+
+
+
+
+

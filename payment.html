@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>payment</title>
+    <link rel="stylesheet" href="paystyles.css">
+</head>
+ <body>
+    <div class="container">
+<form action="">
+        <div class="row">
+            <div class="col">
+                <h3 class="title">BILLING ADDRESS</h3>
+                <div class="inputbox">
+                    <label>FULL NAME:</label>
+                    <input type="text"placeholder="name" required>
+                    <br>
+                </div>
+                <div class="inputbox">
+                    <label>EMAIL:</label>
+                    <input type="email"placeholder="example@example.com" required>
+                <br>
+                </div>
+                <div class="inputbox">
+                    <label>ADDRESS:</label>
+                    <input type="text"placeholder="# door no/street/locality" required>
+                <br>
+                </div>
+                <div class="flex">
+                <label>STATE:</label>
+                    <select name=""id="state" required>
+                        <option value="">---select state---</option>
+                    </select>
+                    <br>
+                </div>
+                <div class="flex">
+                    <label>CITY:</label>
+                    <select name=""id="city" required>
+                        <option value="">---select city---</option>
+                    </select>
+                    <br>
+                </div>
+                <div class="inputbox">
+                    <label>PIN CODE:</label>
+                    <input type="text"placeholder="PINCODE" required>
+                <br>
+                </div>
+            </div>
+        </div>
+    
+    </form>
+        <h1>Payment Options</h1>
+        <div class="payment-option">
+            <input type="radio" name="paymentOption" value="netbanking" id="netbanking">
+            <label for="netbanking">Net Banking</label>
+        </div>
+        <div class="payment-option">
+            <input type="radio" name="paymentOption" value="upi" id="upi">
+            <label for="upi">UPI Apps</label>
+        </div>
+        <button onclick="redirectToNetbanking()">Proceed to Payment</button>
+    </div>
+    <script>
+        function redirectToNetbanking(paymentOption) {
+            // Redirect the user to the selected payment option
+            var netbanking=document.getElementById("netbanking");
+            var upi=document.getElementById("upi");
+            if (netbanking.checked==true) {
+                // Redirect to net banking page
+                window.location.href = "netbanking.html";
+            } else if (upi.checked==true) {
+                // Redirect to UPI app
+                window.location.href = "upi://pay";
+            }
+            else
+            alert("no option selected");
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
